@@ -1,0 +1,11 @@
+<resources>
+    <color name="widget_bg_light">#F2F2F2</color>
+    <color name="widget_bg_dark">#1C1C1E</color>
+    <color name="text_light">#1C1C1E</color>
+    <color name="text_dark">#F2F2F2</color>
+    <color name="level_high">#34C759</color>
+    <color name="level_medium">#FF9F0A</color>
+    <color name="level_low">#FF3B30</color>
+    <color name="track_light">#E0E0E0</color>
+    <color name="track_dark">#3A3A3C</color>
+</resources>

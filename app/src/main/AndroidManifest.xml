@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.BatteryWidgets"
+        android:supportsRtl="true">
+
+        <!-- Configure/settings screen shown once per widget when it's added -->
+        <activity
+            android:name=".WidgetConfigureActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BatteryWidgets">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            The widget provider itself. It listens directly for
+            ACTION_BATTERY_CHANGED — a protected, sticky system broadcast that is
+            explicitly exempted from Android's implicit-broadcast restrictions —
+            so the widget updates the instant the battery level changes, with
+            zero polling, zero AlarmManager, zero background service.
+            This is the main reason this widget won't drain battery.
+        -->
+        <receiver
+            android:name=".BatteryWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/battery_widget_info" />
+        </receiver>
+
+    </application>
+</manifest>

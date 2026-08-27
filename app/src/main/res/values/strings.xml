@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Battery Widgets</string>
+    <string name="widget_description">A minimal, rounded battery level widget. Updates instantly and uses no background polling.</string>
+    <string name="settings_title">Widget Settings</string>
+    <string name="theme_label">Appearance</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_auto">Match system</string>
+    <string name="show_icon_label">Show charging icon</string>
+    <string name="opacity_label">Background opacity</string>
+    <string name="save_button">Add widget</string>
+</resources>

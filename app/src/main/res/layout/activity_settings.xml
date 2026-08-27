@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/theme_label"
+        android:textSize="14sp"
+        android:layout_marginBottom="6dp" />
+
+    <RadioGroup
+        android:id="@+id/theme_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/theme_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_auto"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/theme_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_light" />
+
+        <RadioButton
+            android:id="@+id/theme_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_dark" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/show_icon_label" />
+
+        <Switch
+            android:id="@+id/show_icon_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button" />
+
+</LinearLayout>
